@@ -7,14 +7,3 @@
 //
 
 
-class EntriesDetailViewController {
-      
-       var entry: Entry? {
-           didSet {
-               updateViews()
-           }
-       }
-       
-       
-  
-}
