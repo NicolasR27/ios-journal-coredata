@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  Journal
+//  Ios Journal Coredata
 //
-//  Created by Nicolas Rios on 12/4/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
+//  Created by Nicolas Rios on 2/15/20.
+//  Copyright © 2020 Nicolas Rios. All rights reserved.
 //
 
 import UIKit

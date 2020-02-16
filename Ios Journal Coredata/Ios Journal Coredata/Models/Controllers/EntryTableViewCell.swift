@@ -1,16 +1,15 @@
 //
-//  EntriesTableViewCell.swift
-//  Journal
+//  EntryTableViewCell.swift
+//  Ios Journal Coredata
 //
-//  Created by Nicolas Rios on 12/4/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
+//  Created by Nicolas Rios on 2/15/20.
+//  Copyright © 2020 Nicolas Rios. All rights reserved.
 //
 
 import UIKit
 
-
 class EntryTableViewCell: UITableViewCell {
- 
+    
     var entry: Entry? {
         didSet {
             setUpViews()
@@ -27,7 +26,7 @@ class EntryTableViewCell: UITableViewCell {
         guard let entry = entry else {return}
         titleLabel?.text = entry.title
         let formDate = DateFormatter()
-        formDate.dateFormat = "yyy-MM-dd,  hh:mm a"
+        formDate.dateFormat = "yyy-MM-dd  hh:mm a"
         timeStampLabel?.text = formDate.string(from: entry.timestamp!)
         bodyLabel?.text = entry.bodyText
     }

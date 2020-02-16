@@ -1,36 +1,23 @@
 //
-//  Entry+Convience.swift
-//  Journal
+//  Entry + convenience.swift
+//  Ios Journal Coredata
 //
-//  Created by Nicolas Rios on 12/4/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
+//  Created by Nicolas Rios on 2/15/20.
+//  Copyright © 2020 Nicolas Rios. All rights reserved.
 //
-
-
 
 import Foundation
 import CoreData
 
-enum MoodSetting: String {
-    case unhappy
-    case neutral
-    case happy
-    
-    static var allMoods: [MoodSetting] {
-        return [.unhappy, .neutral, .happy]
-    }
-}
 
 extension Entry {
     convenience init(title: String,
-                     moodSetting: MoodSetting = .neutral,
                      bodyText: String,
                      identifier: String = UUID().uuidString,
                      timestamp: Date = Date(),
                      context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         self.title = title
-        self.moodSetting = moodSetting.rawValue
         self.bodyText = bodyText
         self.identifier = identifier
         self.timestamp = timestamp

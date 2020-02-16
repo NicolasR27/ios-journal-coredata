@@ -1,10 +1,11 @@
 //
 //  EntriesTableViewController.swift
-//  Journal
+//  Ios Journal Coredata
 //
-//  Created by Nicolas Rios on 12/4/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
+//  Created by Nicolas Rios on 2/15/20.
+//  Copyright © 2020 Nicolas Rios. All rights reserved.
 //
+
 
 import UIKit
 import CoreData
@@ -75,7 +76,7 @@ class EntriesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "JournalCellSegue" {
-            guard let vc = segue.destination as? EntriesDetailViewController,
+            guard let vc = segue.destination as? EntryDetailViewController,
                 let indexPath = tableView.indexPathForSelectedRow else {return}
             let entry = entries[indexPath.row]
             
@@ -83,4 +84,3 @@ class EntriesTableViewController: UITableViewController {
         }
     }
 }
-
