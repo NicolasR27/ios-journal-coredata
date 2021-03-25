@@ -1,10 +1,3 @@
-//
-//  EntriesTableViewController.swift
-//  Ios Journal Coredata
-//
-//  Created by Nicolas Rios on 2/15/20.
-//  Copyright © 2020 Nicolas Rios. All rights reserved.
-//
 
 
 import UIKit
